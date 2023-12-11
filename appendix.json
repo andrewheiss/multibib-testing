@@ -1,0 +1,4 @@
+[
+  {"id":"rproject-4-3-1","author":[{"literal":"R Core Team"}],"citation-key":"rproject-4-3-1","event-place":"Vienna, Austria","issued":{"date-parts":[["2023"]]},"publisher":"R Foundation for Statistical Computing","publisher-place":"Vienna, Austria","title":"R: A Language and Environment for Statistical Computing","type":"software","URL":"https://www.r-project.org/","version":"4.3.1"},
+  {"id":"Stan-2-26-1","accessed":{"date-parts":[["2017",8,2]]},"author":[{"literal":"Stan Development Team"}],"citation-key":"Stan-2-26-1","issued":{"date-parts":[["2023"]]},"title":"Stan Modeling Language","type":"software","URL":"https://mc-stan.org","version":"2.26.1"}
+]
