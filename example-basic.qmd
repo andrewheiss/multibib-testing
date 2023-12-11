@@ -1,0 +1,87 @@
+---
+title: "Multiple bibliographies"
+subtitle: "Basic example"
+
+# Use the multibib extension
+filters:
+  - multibib
+
+# Turn off YAML validation
+validate-yaml: false
+
+# Define list of separate bibliography files
+bibliography:
+  main: references.json
+  appendix: appendix.json
+
+# Disable citeproc
+citeproc: false
+
+# Custom cross reference type for appendix tables
+crossref:
+  custom:
+    - kind: float
+      key: apptbl
+      latex-env: apptbl
+      reference-prefix: Table A
+      space-before-numbering: false
+      latex-list-of-description: Appendix Table
+apptbl-cap-location: top
+
+format: 
+  html: 
+    toc: true
+  pdf: default
+---
+
+## Introduction
+
+Computers should be a thing [@Lovelace1842].
+
+See @fig-plot and @apptbl-robustness.
+
+```{r}
+#| label: fig-plot
+#| fig-cap: Some points
+#| fig-width: 4
+#| fig-height: 3.5
+#| echo: false
+plot(1:10)
+```
+
+## Conclusion
+
+Computers can do fancy math [@Turing1936].
+
+## References
+
+::: {#refs-main}
+:::
+
+\newpage
+
+## Appendix
+
+### Software details
+
+We used @rproject-4-3-1 and @Stan-2-26-1 for our analysis.
+
+### Robustness checks
+
+Here's a table to placate reviewers.
+
+::: {#apptbl-robustness}
+
+| Something | Something else |
+|-----------|----------------|
+| 1         | Apple          |
+| 2         | Bat            |
+
+Table of extra details
+
+:::
+
+### Appendix references
+
+::: {#refs-appendix}
+:::
